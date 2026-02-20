@@ -1,8 +1,7 @@
 import React from 'react'
 import { auth } from "../firebase";
-import { signOut, onAuthStateChanged } from "firebase/auth";
+import { onAuthStateChanged } from "firebase/auth";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 function Sidebar() {
 

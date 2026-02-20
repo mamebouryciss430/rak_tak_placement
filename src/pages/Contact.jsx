@@ -1,7 +1,5 @@
-import { useState } from "react";
 import Header from '../components/Header'
 import Sidebar from '../components/Sidebar'
-import { useNavigate } from "react-router-dom";
 
 function Contact() {
   return (
@@ -54,7 +52,7 @@ function Contact() {
         </div>
 
         <div class="col-xl-6">
-            <img src="assets/img/raktak.jpeg"  style={{ width: "430px", height: "auto" }}/>
+            <img alt="raktak" src="assets/img/raktak.jpeg"  style={{ width: "430px", height: "auto" }}/>
         </div>
 
       </div>
