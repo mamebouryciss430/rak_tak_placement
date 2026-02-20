@@ -32,7 +32,8 @@ function Header() {
                 <img src="assets/img/logo.jpg" alt="" class="rounded-circle"></img>
                 <span class="d-none d-lg-block">Rak Tak Placement</span>
             </a>
-            <i class="bi bi-list toggle-sidebar-btn"></i>
+            <i className="bi bi-list toggle-sidebar-btn" onClick={() => document.body.classList.toggle("toggle-sidebar")}
+             style={{ cursor: "pointer" }}></i>
             </div>{/* End Logo */}
 
             {/*<div class="search-bar">
