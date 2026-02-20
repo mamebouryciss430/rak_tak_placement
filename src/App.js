@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import AnnonceList from './pages/AnnonceList'
+import AnnonceForm from './pages/AnnonceForm'
+import AnnonceEdit from './pages/AnnonceEdit'
+import Login from './pages/Login'
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import AnnonceEnAttente from './pages/AnnonceEnAttente'
+import AnnonceApprouvee from './pages/AnnonceApprouvee'
+import Contact from './pages/Contact'
+import ProtectedRoute from "./ProtectedRoute";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<AnnonceList />} />
+        <Route path='/create' element={<AnnonceForm />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/login' element={<Login />} />
+        <Route path="/raktak" element={<ProtectedRoute><AnnonceEnAttente /></ProtectedRoute>}/>
+        <Route path='/raktakApproved' element={<ProtectedRoute><AnnonceApprouvee /></ProtectedRoute>} />
+        <Route path='/raktak/edit/:id' element={<ProtectedRoute><AnnonceEdit /></ProtectedRoute>} />
+
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App
