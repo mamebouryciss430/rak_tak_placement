@@ -84,8 +84,7 @@ function AnnonceForm() {
 
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title"></h5>
-
+                 <br/>
                 {/* General Form Elements */}
                 <form onSubmit={handleSubmit}>
                   <div class="row mb-3">
