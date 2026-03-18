@@ -37,7 +37,7 @@ function Contact() {
               <div class="info-box card">
                 <i class="bi bi-envelope"></i>
                 <h3>Email </h3>
-                <p>rak-tak-placement@gmail.com</p>
+                <p>raktakplacement@gmail.com</p>
               </div>
             </div>
             <div class="col-lg-6">

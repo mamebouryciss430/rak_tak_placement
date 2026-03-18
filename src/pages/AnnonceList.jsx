@@ -1,8 +1,7 @@
 import React from 'react'
 import Header from '../components/Header'
 import Sidebar from '../components/Sidebar'
-
-import { collection, query, where, onSnapshot } from "firebase/firestore";
+import { collection, query, where, onSnapshot, orderBy } from "firebase/firestore";
 import { db } from "../firebase";
 import { useEffect, useState } from "react";
 
@@ -13,7 +12,8 @@ const [annonces, setAnnonces] = useState([]);
   useEffect(() => {
     const q = query(
       collection(db, "annonces"),
-      where("statut", "==", "approuvé")
+      where("statut", "==", "approuvé"),
+      orderBy("createdAt", "desc")
     );
 
     const unsub = onSnapshot(q, (snapshot) => {

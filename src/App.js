@@ -2,6 +2,7 @@ import React from 'react'
 import AnnonceList from './pages/AnnonceList'
 import AnnonceForm from './pages/AnnonceForm'
 import AnnonceEdit from './pages/AnnonceEdit'
+import AnnonceApprouveeEdit from './pages/AnnonceApprouveeEdit'
 import Login from './pages/Login'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import AnnonceEnAttente from './pages/AnnonceEnAttente'
@@ -21,6 +22,8 @@ function App() {
         <Route path="/raktak" element={<ProtectedRoute><AnnonceEnAttente /></ProtectedRoute>}/>
         <Route path='/raktakApproved' element={<ProtectedRoute><AnnonceApprouvee /></ProtectedRoute>} />
         <Route path='/raktak/edit/:id' element={<ProtectedRoute><AnnonceEdit /></ProtectedRoute>} />
+        <Route path='/raktak/editApproved/:id' element={<ProtectedRoute><AnnonceApprouveeEdit /></ProtectedRoute>} />
+
 
       </Routes>
     </BrowserRouter>
