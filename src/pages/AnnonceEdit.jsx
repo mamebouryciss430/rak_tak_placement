@@ -16,7 +16,7 @@ function AnnonceEdit() {
   const [formData, setFormData] = useState({
     titre: "",
     description: "",
-    logement: "Logement non garanti",
+    logement: "Non",
     lieu: "",
     numero_whatsapp: ""
   });
@@ -147,11 +147,11 @@ function AnnonceEdit() {
                           value={formData.logement}
                           onChange={handleChange}
                         >
-                          <option value="Logement non garanti">
-                            Logement non garanti
+                          <option value="Non">
+                            Non
                           </option>
-                          <option value="Logement garanti">
-                            Logement garanti
+                          <option value="Oui">
+                            Oui
                           </option>
                         </select>
                       </div>
@@ -179,7 +179,7 @@ function AnnonceEdit() {
                         <input
                           type="text"
                           className="form-control"
-                          name="numero_whatsapp"
+                          name="telephone"
                           value={formData.telephone}
                           onChange={handleChange}
                           required

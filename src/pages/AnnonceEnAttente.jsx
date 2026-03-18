@@ -122,7 +122,7 @@ function AnnonceEnAttente() {
                     <td>{a.description}</td>
                     <td>{a.lieu}</td>
                     <td>{a.logement}</td>
-                    <td>+{a.telephone}</td>
+                    <td>{a.telephone}</td>
                     <td>{a.createdAt?.toDate().toLocaleDateString('fr-FR', {
                         day: 'numeric',
                         month: 'long',
