@@ -18,44 +18,44 @@ function Sidebar() {
   return (
     <div>
                   {/* ======= Sidebar ======= */}
-        <aside id="sidebar" class="sidebar">
+        <aside id="sidebar" className="sidebar">
 
-            <ul class="sidebar-nav" id="sidebar-nav">
+            <ul className="sidebar-nav" id="sidebar-nav">
 
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="/create">
-                <i style={{color: "blue"}} class="bi bi-megaphone"> </i>
+            <li className="nav-item">
+                <a className="nav-link collapsed" href="/create">
+                <i style={{color: "blue"}} className="bi bi-megaphone"> </i>
                 <span>Publier une annonce</span>
                 </a>
             </li>{/* End Dashboard Nav */}
 
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="/">
-                <i style={{color: "blue"}} class="bi bi-chat-right-text"></i>                
+            <li className="nav-item">
+                <a className="nav-link collapsed" href="/">
+                <i style={{color: "blue"}} className="bi bi-chat-right-text"></i>                
                 <span>Toutes les annonces</span>
                 </a>
             </li>{/* End Dashboard Nav */}
 
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="/contact">
-                <i style={{color: "blue"}} class="bi bi-info-square"></i>                
+            <li className="nav-item">
+                <a className="nav-link collapsed" href="/contact">
+                <i style={{color: "blue"}} className="bi bi-info-square"></i>                
                 <span>Info</span>
                 </a>
             </li>{/* End Dashboard Nav */}
 
             {user && (
              <div>
-                <li class="nav-heading">Administration</li>
+                <li className="nav-heading">Administration</li>
 
-                <li class="nav-item">
-                    <a class="nav-link collapsed" href="/raktak">
-                    <i style={{color: "blue"}} class="bi bi-download"></i>
+                <li className="nav-item">
+                    <a className="nav-link collapsed" href="/raktak">
+                    <i style={{color: "blue"}} className="bi bi-download"></i>
                     <span>Annonces en attente</span>
                     </a>
                 </li>{/* End Profile Page Nav */}
-                <li class="nav-item">
-                    <a class="nav-link collapsed" href="/raktakApproved">
-                    <i style={{color: "blue"}} class="bi bi-check-circle"></i>
+                <li className="nav-item">
+                    <a className="nav-link collapsed" href="/raktakApproved">
+                    <i style={{color: "blue"}} className="bi bi-check-circle"></i>
                     <span>Annonces approuvées</span>
                     </a>
                 </li>

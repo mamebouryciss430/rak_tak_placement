@@ -92,17 +92,17 @@ function AnnonceApprouvee() {
     <div>
        <Header/>
        <Sidebar/>  
-     <main id="main" class="main">
+     <main id="main" className="main">
 
-      <section class="section">
-        <div class="row">
-          <div class="col-lg-12">
+      <section className="section">
+        <div className="row">
+          <div className="col-lg-12">
 
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Liste des annonces approuvées</h5>
+          <div className="card">
+            <div className="card-body">
+              <h5 className="card-title">Liste des annonces approuvées</h5>
 
-              <table class="table table-striped">
+              <table className="table table-striped">
                 <thead>
                   <tr>
                     <th scope="col">Titre</th>
@@ -130,10 +130,10 @@ function AnnonceApprouvee() {
                       })}</td>
                     <td>{a.statut}</td>
                     <td>   
-                        <button type="button" class="btn btn-secondary" onClick={() => handleAccept(a.id)}><i class="bi bi-arrow-repeat"></i></button>
-                        <button type="button" class="btn btn-danger" onClick={() => openDeleteModal(a.id)}><i class="bi bi-exclamation-octagon"></i></button>
-                        <button type="button" class="btn btn-warning" onClick={() => handleEdit(a.id)}><i class="bi bi-pencil"></i></button>
-                        <button type="button" class="btn btn-info" onClick={() => handleInfo(a)}><i class="bi bi-info-circle"></i></button></td>
+                        <button type="button" className="btn btn-secondary" onClick={() => handleAccept(a.id)}><i className="bi bi-arrow-repeat"></i></button>
+                        <button type="button" className="btn btn-danger" onClick={() => openDeleteModal(a.id)}><i className="bi bi-exclamation-octagon"></i></button>
+                        <button type="button" className="btn btn-warning" onClick={() => handleEdit(a.id)}><i className="bi bi-pencil"></i></button>
+                        <button type="button" className="btn btn-info" onClick={() => handleInfo(a)}><i className="bi bi-info-circle"></i></button></td>
                   </tr>
                 ))}
                 </tbody>
