@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
+import Footer from "../components/Footer";
 import { collection, query, where, onSnapshot, orderBy } from "firebase/firestore";
 import { db } from "../firebase";
 import { useEffect, useState } from "react";
@@ -93,61 +94,64 @@ function AnnonceEnAttente() {
     <div>
        <Header/>
        <Sidebar/>  
-     <main id="main" class="main">
+      <main id="main" class="main">
 
-      <section class="section">
-        <div class="row">
-          <div class="col-lg-12">
+        <section class="section">
+          <div class="row">
+            <div class="col-lg-12">
 
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Liste des annonces en attente</h5>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Liste des annonces en attente</h5>
 
-              <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th scope="col">Titre</th>
-                    <th scope="col">Description</th>
-                    <th scope="col">Lieu</th>
-                    <th scope="col">Logement</th>
-                    <th scope="col">Téléphone</th>
-                    <th scope="col">Date</th>
-                    <th scope="col">Statut</th>
-                    <th scope="col">Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                {annonces.map(a => (
-                  <tr key={a.id}>
-                    <td>{a.titre}</td>
-                    <td>{a.description}</td>
-                    <td>{a.lieu}</td>
-                    <td>{a.logement}</td>
-                    <td>{a.telephone}</td>
-                    <td>{a.createdAt?.toDate().toLocaleDateString('fr-FR', {
-                        day: 'numeric',
-                        month: 'long',
-                        year: 'numeric'
-                      })}</td>
-                    <td>{a.statut}</td>
-                    <td>   
-                        <button type="button" class="btn btn-success" onClick={() => handleAccept(a.id)}><i class="bi bi-check-circle"></i></button>
-                        <button type="button" class="btn btn-danger" onClick={() => openDeleteModal(a.id)}><i class="bi bi-exclamation-octagon"></i></button>
-                        <button type="button" class="btn btn-warning" onClick={() => handleEdit(a.id)}><i class="bi bi-pencil"></i></button>
-                        <button type="button" class="btn btn-info" onClick={() => handleInfo(a)}><i class="bi bi-info-circle"></i></button></td>
-                  </tr>
-                ))}
-                </tbody>
-              </table>
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Titre</th>
+                      <th scope="col">Description</th>
+                      <th scope="col">Lieu</th>
+                      <th scope="col">Logement</th>
+                      <th scope="col">Téléphone</th>
+                      <th scope="col">Date</th>
+                      <th scope="col">Statut</th>
+                      <th scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  {annonces.map(a => (
+                    <tr key={a.id}>
+                      <td>{a.titre}</td>
+                      <td>{a.description}</td>
+                      <td>{a.lieu}</td>
+                      <td>{a.logement}</td>
+                      <td>{a.telephone}</td>
+                      <td>{a.createdAt?.toDate().toLocaleDateString('fr-FR', {
+                          day: 'numeric',
+                          month: 'long',
+                          year: 'numeric'
+                        })}</td>
+                      <td>{a.statut}</td>
+                      <td>   
+                          <button type="button" class="btn btn-success" onClick={() => handleAccept(a.id)}><i class="bi bi-check-circle"></i></button>
+                          <button type="button" class="btn btn-danger" onClick={() => openDeleteModal(a.id)}><i class="bi bi-exclamation-octagon"></i></button>
+                          <button type="button" class="btn btn-warning" onClick={() => handleEdit(a.id)}><i class="bi bi-pencil"></i></button>
+                          <button type="button" class="btn btn-info" onClick={() => handleInfo(a)}><i class="bi bi-info-circle"></i></button></td>
+                    </tr>
+                  ))}
+                  </tbody>
+                </table>
+
+              </div>
+            </div>
 
             </div>
           </div>
+        </section>
 
-          </div>
-        </div>
-      </section>
+      </main>{/* End #main */}  
 
-     </main>{/* End #main */}    
+      <Footer />
+
           {successMessage && (
       <div
         style={{

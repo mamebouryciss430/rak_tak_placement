@@ -3,6 +3,7 @@ import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { db } from "../firebase";
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
+import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
 
 function AnnonceForm() {
@@ -221,6 +222,8 @@ function AnnonceForm() {
         </section>
 
       </main>
+
+      <Footer/>
 
       {/* MESSAGE SUCCESS */}
       {successMessage && (

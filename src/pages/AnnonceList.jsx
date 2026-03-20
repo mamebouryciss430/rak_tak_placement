@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '../components/Header'
 import Sidebar from '../components/Sidebar'
+import Footer from "../components/Footer";
 import { collection, query, where, onSnapshot, orderBy } from "firebase/firestore";
 import { db } from "../firebase";
 import { useEffect, useState } from "react";
@@ -48,7 +49,7 @@ const [annonces, setAnnonces] = useState([]);
                     <div class="card-body">
                     <h5 class="card-title">{a.titre}</h5>
                     <p>{a.description}</p>
-                    <p><i class="bi bi-bank2" style={{color: "#d39c25"}}> </i>{a.logement}</p>
+                    <p><i class="bi bi-bank2" style={{color: "#d39c25"}}> </i>Longement : {a.logement}</p>
                     <p><i class="bi bi-geo-alt-fill" style={{color: "#3125d3"}}> </i>{a.lieu}</p>
                     <p><i class="bi bi-bi bi-telephone-plus-fill" style={{color: "#08570c"}}> </i>{a.telephone}</p>
                     <p><i class="bi bi-calendar2-check-fill" style={{color: "#3f25d3"}}> </i>{a.createdAt?.toDate().toLocaleDateString('fr-FR', {
@@ -78,6 +79,9 @@ const [annonces, setAnnonces] = useState([]);
             </section>
 
         </main>{/* End #main */}
+
+        <Footer/>        
+
 
     </div>
   )

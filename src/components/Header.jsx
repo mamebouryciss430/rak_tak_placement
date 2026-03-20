@@ -43,38 +43,64 @@ function Header() {
             </form>
             </div>End Search Bar*/}
 
-            {user && (
-            <nav class="header-nav ms-auto">
-            <ul class="d-flex align-items-center">
+            <nav className="header-nav ms-auto">
 
-                <li class="nav-item dropdown pe-3">
+              {/* SI CONNECTÉ */}
+              {user ? (
+                <ul className="d-flex align-items-center">
 
-                <a class="nav-link nav-profile d-flex align-items-center pe-0" href="/contact" data-bs-toggle="dropdown">
-                    <img src="assets/img/logo.jpg" alt="Profile" class="rounded-circle"/>
-                    <span class="d-none d-md-block dropdown-toggle ps-2">Admin</span>
-                </a>{/* End Profile Iamge Icon */}
+                  <li className="nav-item dropdown pe-3">
 
-                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-                    <li class="dropdown-header">
-                    <h6>Admin Rak Tak</h6>
-                    <span>Placement</span>
-                    </li>
-                    <li>
-                    <hr class="dropdown-divider"/>
-                    </li>
+                    <a
+                      className="nav-link nav-profile d-flex align-items-center pe-0"
+                      href="#"
+                      data-bs-toggle="dropdown"
+                    >
+                      <img src="assets/img/logo.jpg" alt="Profile" className="rounded-circle"/>
+                      <span className="d-none d-md-block dropdown-toggle ps-2">
+                        Admin
+                      </span>
+                    </a>
 
-                    <li>
+                    <ul className="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                      <li className="dropdown-header">
+                        <h6>Admin Rak Tak</h6>
+                        <span>Placement</span>
+                      </li>
+
+                      <li>
+                        <hr className="dropdown-divider"/>
+                      </li>
+
+                      <li className="text-center">
                         <button onClick={handleLogout} className="btn btn-danger">
-                        <i class="bi bi-box-arrow-right"></i>
-                        <span>Déconnexion</span></button>
-                    </li>
+                          <i className="bi bi-box-arrow-right"></i> Déconnexion
+                        </button>
+                      </li>
+                    </ul>
 
-                </ul>{/* End Profile Dropdown Items */}
-                </li>{/* End Profile Nav */}
+                  </li>
+                </ul>
 
-            </ul>
+              ) : (
+
+                /* PAS CONNECTÉ → afficher login */
+                <ul className="d-flex align-items-center">
+
+                  <li className="nav-item pe-3">
+                    <a href="/login">
+                      <span>
+                        <i className="bi bi-box-arrow-right"></i> Se connecter
+                      </span>
+                    </a>
+                  </li>
+
+                </ul>
+
+              )}
+
             </nav>
-            )}
+
 
         </header>{/* End Header */}
     </div>

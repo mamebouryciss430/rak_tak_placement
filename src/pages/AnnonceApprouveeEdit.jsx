@@ -4,6 +4,7 @@ import { db } from "../firebase";
 import { useNavigate, useParams } from "react-router-dom";
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
+import Footer from "../components/Footer";
 
 function AnnonceApprouveeEdit() {
 
@@ -206,6 +207,8 @@ function AnnonceApprouveeEdit() {
         </section>
 
       </main>
+
+      <Footer />
 
       {successMessage && (
         <div

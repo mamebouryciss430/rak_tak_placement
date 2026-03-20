@@ -5,6 +5,17 @@ function Footer() {
     <div>
             {/* ======= Footer ======= */}
         <footer id="footer" class="footer">
+
+            {/* <div className="info-box card">
+              <div className="form-check">
+                 <h4>Charte de Confiance Rak Tak Placement</h4>
+                  <input className="form-check-input" type="checkbox" checked/>
+                  <label className="form-check-label">
+                    <p>Bienvenue sur <strong><span>Rak Tak Placement</span></strong>, un espace de mise en relation. Nous facilitons le contact, mais le contrat de travail et les modalités de paiement restent sous la responsabilité directe de l'employeur et du travailleur.</p>
+                    <p>En utilisant Tak Tak Placement, <strong><span>vous acceptez ces principes</span></strong> pour un service sûr, rapide et humain.
+                    </p>    </label></div>        
+           </div> */}
+
             <div class="copyright">
             &copy; Copyright <strong><span>Rak Tak Placement</span></strong>. All Rights Reserved
             </div>

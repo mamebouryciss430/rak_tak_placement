@@ -4,6 +4,7 @@ import { db } from "../firebase";
 import { useNavigate, useParams } from "react-router-dom";
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
+import Footer from "../components/Footer";
 
 function AnnonceEdit() {
 
@@ -45,7 +46,7 @@ function AnnonceEdit() {
     fetchAnnonce();
   }, [id, navigate]);
 
-  // ✏️ Gestion changement input
+  //  Gestion changement input
   const handleChange = (e) => {
     const { name, value } = e.target;
 
@@ -55,7 +56,7 @@ function AnnonceEdit() {
     });
   };
 
-  // 💾 Mise à jour annonce
+  //  Mise à jour annonce
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -77,7 +78,7 @@ function AnnonceEdit() {
     }
   };
 
-  // ⏳ Loader
+  // Loader
   if (loading) {
     return (
       <div className="text-center mt-5">
@@ -206,6 +207,8 @@ function AnnonceEdit() {
         </section>
 
       </main>
+
+      <Footer />
 
       {successMessage && (
         <div

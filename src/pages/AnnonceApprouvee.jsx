@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
+import Footer from "../components/Footer";
 import { collection, query, where, onSnapshot, orderBy } from "firebase/firestore";
 import { db } from "../firebase";
 import { useEffect, useState } from "react";
@@ -146,6 +147,9 @@ function AnnonceApprouvee() {
       </section>
 
      </main>{/* End #main */}    
+
+      <Footer/>
+
           {successMessage && (
       <div
         style={{
